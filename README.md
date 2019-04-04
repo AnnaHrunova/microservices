@@ -16,5 +16,5 @@ Plese, pull it and point it's path in https://github.com/AnnaHrunova/microservic
 Main page: http://localhost:8089/microservices/web/src/webapp/html/allUsers.html <br>
 User creating page: http://localhost:8089/microservices/web/src/webapp/html/createUser.html <br>
 2). config-server and service-registry should be started firstly. <br><br>
-Used technologies: spring boot, spring cloud, Eureka, Feign, Ribbon, Embedded mongo.<br><br>
+<b>Used technologies:</b> spring boot, spring cloud, Eureka, Feign, Ribbon, Embedded mongo.<br><br>
 <b>TODO:</b> add tests

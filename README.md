@@ -9,12 +9,12 @@ If some of services is down and doesn't respond, then dummy response is sent. <b
 For example, is web microservice successfully gets user info from users microservice, <br>
 but items microservice is down, then user data with dummy items is shown. <br>
 Also, it is possible to deploy multiple instances of each microservice. <br>
-That's why port, from which information has been got, is shown.<br>
-<b>!!!</b>
+That's why port, from which information has been got, is shown.<br><br>
+<b>!!! Notes !!!</b><br>
 1). spring cloud config folder for those microservices is stored in https://github.com/AnnaHrunova/config <br>
 Plese, pull it and point it's path in https://github.com/AnnaHrunova/microservices/blob/master/config-server/src/main/resources/application.yaml properties file. <br>
 Main page: http://localhost:8089/microservices/web/src/webapp/html/allUsers.html <br>
 User creating page: http://localhost:8089/microservices/web/src/webapp/html/createUser.html <br>
-2). config-server and service-registry should be started firstly. <br>
-Used technologies: spring boot, spring cloud, Eureka, Feign, Ribbon, Embedded mongo.<br>
+2). config-server and service-registry should be started firstly. <br><br>
+Used technologies: spring boot, spring cloud, Eureka, Feign, Ribbon, Embedded mongo.<br><br>
 <b>TODO:</b> add tests

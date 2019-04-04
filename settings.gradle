@@ -1,0 +1,5 @@
+include 'items'
+include 'users'
+include 'web'
+include 'service-registry'
+include 'config-server'

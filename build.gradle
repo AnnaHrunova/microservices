@@ -1,0 +1,68 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+
+    }
+}
+
+plugins {
+    id 'com.sourcemuse.mongo' version '1.0.6'
+}
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group = 'lv.item'
+    version = '0.1'
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+        maven { url "https://repo.spring.io/snapshot" }
+        maven { url "https://repo.spring.io/milestone" }
+    }
+
+    ext {
+        libs = [
+                'spring'             : [
+                        'org.springframework.boot:spring-boot-starter-web'
+                ],
+                'springFlux'         : [
+                        'org.springframework.boot:spring-boot-starter-webflux'
+                ],
+                'persistance'        : [
+                        'org.springframework.data:spring-data-mongodb',
+                        'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+                ],
+                'persistanceReactive': [
+                        'org.springframework.boot:spring-boot-starter-data-mongodb-reactive',
+                        'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+                ],
+                'test'               : [
+                        'io.projectreactor:reactor-test',
+                        'junit:junit'
+                ],
+                'templateEngine' : [
+                        'org.springframework.boot:spring-boot-starter-thymeleaf',
+                        'org.webjars:bootstrap:3.3.7',
+                        'org.webjars:highcharts:5.0.8',
+                ]
+        ]
+
+    }
+
+}
+
+
